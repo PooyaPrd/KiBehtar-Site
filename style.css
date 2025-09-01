@@ -16,7 +16,9 @@
     padding:0;
     font-family: Yekan Bakh; 
 }
-
+html{
+    overflow-x: hidden;
+}
 .header{
     border-bottom: 1px solid rgba(176, 176, 176, 0.462);
     padding: 20px 3rem;
@@ -366,15 +368,16 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 45px;
     }
+   
     #enamad{
         margin-bottom: 20px;
         margin-top:10px;
     }
-    #footer-cta button{
-        margin-top:30px;
-    }
+
     #footer-des{
+        display: inline;
         font-weight: 300;
         font-size: 1.2rem;
         opacity: 0.8;
