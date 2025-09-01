@@ -1,6 +1,8 @@
 @font-face {
     font-family: Yekan Bakh;
-    src: url(/Assets/YekanBakh-VF.ttf) format('truetype-variations');
+    src: url(./Assets/YekanBakh-VF.ttf) format('truetype-variations'),
+         url(./Assets/YekanBakh-VF.woff) format('woff'), 
+         url(./Assets/YekanBakh-VF.woff2) format('woff2');
     font-weight: 100 900;
 }
 *{
@@ -85,8 +87,12 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 100px 0;
-
-
+}
+#prop-h2{
+    color:#1E1925; font-weight: 700; font-size:1.9rem ; margin-bottom:8px;
+}
+#prop-p{
+    color:#606060; font-size: 1.3rem;
 }
 #prop-text{
     text-align: center;
@@ -167,6 +173,13 @@ body{
     padding: 12px 40px;
     margin: 40px 0;
 }
+.textbox-icons-img-1{
+    width: 150px;
+}
+.textbox-icons-img-2{
+    width: 60px;
+}
+
 /* mobile */
 
 @media(max-width: 700px){
@@ -177,14 +190,30 @@ body{
         flex-wrap: nowrap;
         height: fit-content;
     }
+    #prop-h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    #prop-p{
+        font-size: 1rem;
+    }
+    .textbox-icons-img-1{
+        width: 100px;
+    }
+    .textbox-icons-img-2{
+        width: 40px;
+    }
     .section-img{
-        width: 350px;
+        width: 250px;
         padding: 0;
         margin-top:20px;
     }
     .textbox{
         width: 90%;
         height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
     }
     .textbox-h3{
         font-size: 1.6rem;
