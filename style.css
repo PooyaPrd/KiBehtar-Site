@@ -5,6 +5,12 @@
          url(./Assets/YekanBakh-VF.woff2) format('woff2');
     font-weight: 100 900;
 }
+@font-face {
+    font-family: Yekan Bakh Fan;
+    src: url(./Assets/YekanBakhFaNum-VF.woff) format('woff'), 
+    url(./Assets/YekanBakhFaNum-VF.woff2) format('woff2');
+    font-weight: 100 900;
+}
 *{
     margin: 0; 
     padding:0;
@@ -23,11 +29,12 @@
 }
 
 body{
+    color:var(--KB-midnight);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
-
+    overflow-x: hidden;
 }
 
 .logo{
@@ -88,8 +95,8 @@ body{
     align-items: center;
     margin: 100px 0;
 }
-#prop-h2{
-    color:#1E1925; font-weight: 700; font-size:1.9rem ; margin-bottom:8px;
+.prop-h2{
+    color:var(--KB-midnight); font-weight: 700; font-size:1.9rem ; margin-bottom:8px;
 }
 #prop-p{
     color:#606060; font-size: 1.3rem;
@@ -179,23 +186,242 @@ body{
 .textbox-icons-img-2{
     width: 60px;
 }
+#ads{
+    width: 97vw;
+    margin-bottom: 160px;
+}
+
+.toggle-container {
+    margin:10px;
+    background-color: #F1F0FF;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size:1.3rem;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.toggle-label {
+    padding: 10px 20px;
+    background-color: #F1F0FF;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-label:hover {
+    font-weight: 500;
+}
+
+input[type="radio"]:checked + .toggle-label {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.056);
+}
+
+input[type="radio"]:checked + .toggle-label + .toggle-switch {
+    left: 60px; 
+}
+
+.blue-bg{
+    width: 70vw;
+    background-color: #F1F0FF;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px;
+    border-radius: 60px;
+    margin-top: 20px;
+}
+.ab-section{
+    background: linear-gradient(to bottom, white, #F1F0FF);
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+    height: 400px;
+    justify-content: end;
+    width: 350px;
+    padding: 40px;
+    padding-top:0;
+    box-sizing: border-box;
+    border-radius: 60px;
+    margin-bottom: 90px;
+}
+.ab-section img{
+    width: 300px;
+    top: -40%;
+    position: absolute;
+}
+.ab-h2{
+    font-family: IranSansX;
+    font-weight: 900;
+    font-size: 3.2rem;
+}
+
+.ab-span{
+    margin-top:15px;
+    text-align: center;
+    color:var(--KB-darkGray);
+}
+#container-ab{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: space-around;
+}
+
+footer{
+    width: 98%;
+    aspect-ratio: 165/76;
+    background-image: url(./Assets/footer.png);
+    background-size: contain;
+    background-repeat: no-repeat;   
+    display: flex;
+    flex-direction: column;
+    justify-content: end; 
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    align-items: center;
+    overflow: hidden;
+    margin-top:100px;
+}
+
+.copyright{
+    font-family: Yekan Bakh Fan;
+    color: white;
+    width: 80vw;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:20px 0;
+}
+
+#phone{
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+    opacity: 0.8;
+    font-weight: 300; font-size:22px
+}
+#footer-container{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 200px;
+}
+.low-op{
+    font-weight: 100;
+    opacity: 0.8;
+    font-family: Yekan Bakh Fan;
+}
+#footer-cta{
+    display: flex;
+    color:white;
+    font-size: 45px;
+    font-weight: 600;
+    flex-direction: column;
+    
+}
+.blue-bg p{
+    width: 30vw; text-align: center; margin-top:0; margin-bottom: 150px;
+}
+#footer-des{
+    display: none;
+}
 
 /* mobile */
 
 @media(max-width: 700px){
+    #phone{
+        font-size: 9px;
+        font-weight: 400;
+    }
+    .footer{
+        background-image: url(./Assets/footer-mobile.png);
+        aspect-ratio: 35/50;
+    }
+    .copyright{
+        margin:0;
+        margin-top:20px;
+    }
+    #footer-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    #footer-cta{
+        font-size: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #enamad{
+        margin-bottom: 20px;
+        margin-top:10px;
+    }
+    #footer-cta button{
+        margin-top:30px;
+    }
+    #footer-des{
+        font-weight: 300;
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+    .low-op{
+        font-size: 0.4rem;
+    }
+    .copyright img{
+        width: 60px;
+    }
+    #eng{display: none;}
+    .ab-section{
+        width: 85vw;
+    }
+    #container-ab{
+        gap:20vw;
+    }
+    .ab-h2{
+        font-size: 2.5rem;
+    }
+
+    .blue-bg{
+        width: 70vw;
+    }
+
+    .toggle-container{
+        font-size: 1rem;
+    }
+
+    #ads{
+        width: 93vw;
+    }
+
     .section{
         padding: 20px 0;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         height: fit-content;
+        width: 85vw;
     }
-    #prop-h2{
+    .prop-h2{
         font-size: 1.5rem;
         font-weight: 700;
     }
     #prop-p{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .textbox-icons-img-1{
         width: 100px;
@@ -220,6 +446,9 @@ body{
     }
     .textbox-p{
         font-size:0.9rem;
+    }
+    .blue-bg p {
+        width: 80vw;
     }
 
     #hero-img{
